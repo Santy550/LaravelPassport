@@ -21,7 +21,7 @@ class LoginController extends Controller
         if (Auth::attempt($credentials)) {
             $identificador_user = session('idUser');
             //return  Auth::user()->toJson();
-            return Auth::user()->createToken('aaaaaaaaaa')->accessToken;
+            return Auth::user()->createToken('tokenUser')->accessToken;
         }
         return 'No estas registrado';
     }

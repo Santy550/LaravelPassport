@@ -23,6 +23,6 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 Route::post('register', [RegisterController::class, 'register']);
 Route::post('login', [LoginController::class, 'authenticate']);
-Route::post('mostrar', [LoginController::class, 'mostrar']);
+Route::get('mostrar', [LoginController::class, 'mostrar'])->middleware('auth:api');
 Route::post('deleteToken', [DeleteTokenController::class, 'deleteToken']);
 

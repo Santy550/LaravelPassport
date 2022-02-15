@@ -29,4 +29,5 @@ class LoginController extends Controller
     public function mostrar() {
         return Auth::user();
     }
+
 }

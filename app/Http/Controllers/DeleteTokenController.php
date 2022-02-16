@@ -8,7 +8,7 @@ use Illuminate\Support\Facades\Auth;
 class DeleteTokenController extends Controller
 {
     public function deleteToken() {
-        Auth::user()->token()->delete;
+        Auth::user()->token()->revoke;
         return "Token eliminado con éxito";
     }
 }
